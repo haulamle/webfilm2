@@ -1,0 +1,15 @@
+.outline {
+  @apply bg-transparent text-[rgba(0,212,255,0.9)] border border-[rgba(0,212,255,0.6)] transition-all duration-300;
+}
+
+.outline:hover {
+  @apply transform scale-125 text-white border-white transition-all duration-300;
+}
+
+.fill {
+  @apply bg-[rgba(0,212,255,0.9)] text-white drop-shadow font-bold transition-all duration-300;
+}
+
+.fill:hover {
+  @apply transform scale-125 border-white drop-shadow-lg transition-all duration-300;
+}
