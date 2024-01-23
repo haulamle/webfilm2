@@ -63,7 +63,7 @@ export const FormAutocomplete = (props: IProps) => {
             fullWidth
             size={size}
             options={options}
-            onChange={(_, item) => {
+            onChange={(__, item) => {
               if (_.isEqual(value, item)) return
 
               onChange(item)
