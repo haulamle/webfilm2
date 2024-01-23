@@ -14,7 +14,7 @@ const CardNews = ({ data }: IProp) => {
 
   return (
     <Box
-      className='backdrop-blur-lg rounded-lg border bg-[#eeeeee]  border-white/10 px-2 pb-2 flex flex-col items-center justify-center w-[49%] cursor-pointer'
+      className='rounded-lg bg-[#eeeeee] px-2 pb-2 flex flex-col items-center justify-center w-full cursor-pointer'
       onClick={() => {
         goToNextPage(navigate, `${PATH.news}/${data.id}`)
       }}
@@ -26,7 +26,7 @@ const CardNews = ({ data }: IProp) => {
             alt='avatar'
             src='https://www.vietnamfineart.com.vn/wp-content/uploads/2023/03/avatar-gai-xinh-10-2.jpg'
           />
-          <Typography component={'span'}>Tungns</Typography>
+          <Typography component={'span'}>Admin</Typography>
         </Box>
 
         <ImageWithFallback

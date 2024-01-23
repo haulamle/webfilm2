@@ -30,7 +30,7 @@ const SubNavbar = ({ anchorEl, handleClose, open, subNavbar, type }: IProp) => {
           <Box
             key={index}
             padding={'0.25rem 1.5rem'}
-            className={`w-[150px] cursor-pointer hover:bg-[#cecece]`}
+            className={`w-[150px] cursor-pointer hover:bg-[#eeeeee67]`}
             onClick={() => {
               goToNextPage(
                 navigate,

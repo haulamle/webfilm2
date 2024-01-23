@@ -8,7 +8,7 @@ export const categoryList = [
   'Viễn Tưởng',
   'Hoạt Hình',
   'Kinh Dị',
-  'Phim Hài',
+  'Hài',
   'Tâm Lý',
   'Hành Động',
   'Hình Sự',
@@ -50,6 +50,6 @@ export const navbarList: { id: string; path: string; subNavbar?: string[] }[] = 
     subNavbar: nationList
   },
   { id: 'PHIM LẺ', path: `${PATH.search}/?category=PHIM LẺ` },
-  { id: 'PHIM MỚI', path: `${PATH.search}/?category=PHIM MỚI` },
-  { id: 'PHIM 18+', path: `${PATH.search}/?category=PHIM 18+` }
+  { id: 'PHIM MỚI', path: `${PATH.search}/?category=PHIM MỚI` }
+  // { id: 'PHIM 18+', path: `${PATH.search}/?p=PHIM 18+` }
 ]

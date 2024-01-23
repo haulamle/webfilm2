@@ -24,7 +24,7 @@ const Home = () => {
   }, [])
 
   return (
-    <Box className='flex flex-1 flex-col h-full p-2'>
+    <Box className='flex flex-1 flex-col py-4'>
       <Box className='w-full'>
         <SlideMovie
           title='Phim nổi bật'
@@ -35,18 +35,19 @@ const Home = () => {
           isAutoPlay={true}
         />
       </Box>
+
       <Box className='w-full py-4 flex flex-col gap-4'>
-        <Content data={data} />
+        <Content data={data} title='HOT' loading={isLoading} />
       </Box>
-      <Box className='w-full'>
-        <SlideMovie title='HOT' category='HOT' data={data} loading={isLoading} />
+
+      <Box className='w-full py-4 flex flex-col gap-4'>
+        <Content data={data} title='Phim lẻ mới nhất' loading={isLoading} />
       </Box>
-      <Box className='w-full'>
-        <SlideMovie title='Phim lẻ mới nhất' category='Phim lẻ mới nhất' data={data} loading={isLoading} />
+
+      <Box className='w-full py-4 flex flex-col gap-4'>
+        <Content data={data} title='Phim bộ mới cập nhật' loading={isLoading} />
       </Box>
-      <Box className='w-full'>
-        <SlideMovie title='Phim bộ mới cập nhật' category='Phim bộ mới cập nhật' data={data} loading={isLoading} />
-      </Box>
+
       <Box className='w-full py-4 flex flex-col gap-4'>
         <BoxNews loading={isLoadingNews} data={dataNews} />
       </Box>

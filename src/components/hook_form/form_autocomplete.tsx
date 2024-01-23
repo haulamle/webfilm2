@@ -63,7 +63,7 @@ export const FormAutocomplete = (props: IProps) => {
             fullWidth
             size={size}
             options={options}
-            onChange={(item) => {
+            onChange={(event, item) => {
               if (_.isEqual(value, item)) return
 
               onChange(item)
@@ -103,8 +103,38 @@ export const FormAutocomplete = (props: IProps) => {
                   disabled={disabled}
                   variant={variant}
                   required={required}
+                  sx={{
+                    '& label': {
+                      color: 'white'
+                    },
+                    '& label.Mui-focused': {
+                      color: 'white'
+                    },
+                    '& .MuiAutocomplete-input': {
+                      color: 'white'
+                    },
+                    '& .MuiInput-underline:after': {
+                      borderBottomColor: 'yellow'
+                    },
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'white'
+                      },
+                      '&:hover fieldset': {
+                        borderColor: 'white'
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: 'white'
+                      }
+                    }
+                  }}
                 />
               )
+            }}
+            sx={{
+              '& .css-i4bv87-MuiSvgIcon-root': {
+                color: 'white'
+              }
             }}
           />
         </FormControl>

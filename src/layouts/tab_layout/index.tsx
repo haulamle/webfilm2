@@ -21,17 +21,16 @@ const TabLayout = (props: IProps) => {
     <Box display='flex' height='100%' flex={1} flexDirection='column' position={'inherit'}>
       <TabContext value={value}>
         <Box
-          bgcolor={'white'}
-          // mx={1}
           sx={{
             borderBottom: 1,
-            borderColor: 'divider',
+            borderColor: 'white',
+            // borderColor: 'divider',
             ...sx
           }}
         >
           <TabList onChange={onChange} variant='scrollable'>
             {tabList.map((tab) => (
-              <Tab sx={{ fontWeight: 700 }} label={tab.label} value={tab.key} key={tab.key} />
+              <Tab sx={{ fontWeight: 500, color: 'white' }} label={tab.label} value={tab.key} key={tab.key} />
             ))}
           </TabList>
         </Box>

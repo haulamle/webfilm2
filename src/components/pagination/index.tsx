@@ -23,6 +23,13 @@ const PaginationCPN = ({ page = 1, totalPage, handleChangePage, disabled, total,
             count={totalPage}
             disabled={totalPage === 1 || total === 0 || disabled}
             siblingCount={1}
+            sx={{
+              ul: {
+                '& .MuiPaginationItem-root': {
+                  color: '#fff'
+                }
+              }
+            }}
           />
         </Box>
       )}

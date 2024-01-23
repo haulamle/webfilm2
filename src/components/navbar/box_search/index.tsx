@@ -9,10 +9,13 @@ import { ImageWithFallback } from 'src/components/image_with_fallback'
 import { useIsRequestError, useIsRequestPending } from 'src/hooks/use_status'
 import { useAppDispatch, useAppSelector } from 'src/redux_store'
 import { getMovies } from 'src/redux_store/movie/movie_action'
-
-const BoxFeaturedMovie = () => {
-  const navigate = useNavigate()
+interface IProps {
+  search?: string
+  setSearch: React.Dispatch<React.SetStateAction<string>>
+}
+const BoxSearch = ({ setSearch }: IProps) => {
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   const { data } = useAppSelector((state) => state.movieSlice)
 
   const isLoading = useIsRequestPending('movies', 'getMovies')
@@ -50,7 +53,7 @@ const BoxFeaturedMovie = () => {
     )
 
   return (
-    <Box className={`flex flex-col gap-2 flex-1 text-white`}>
+    <Box className={`flex flex-col gap-2 flex-1 text-black`}>
       {_.isEmpty(data) ? (
         <EmptyMessage />
       ) : (
@@ -58,6 +61,7 @@ const BoxFeaturedMovie = () => {
           <Box
             onClick={() => {
               navigate('/detail/chang-quy-tu')
+              setSearch('')
             }}
             key={item.id}
             className='w-ful flex gap-2 items-center cursor-pointer hover:bg-[#eeeeee67]'
@@ -89,4 +93,4 @@ const BoxFeaturedMovie = () => {
   )
 }
 
-export default BoxFeaturedMovie
+export default BoxSearch

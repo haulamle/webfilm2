@@ -8,8 +8,8 @@ const BoxInformation = () => {
   const [rating, setRating] = useState<number>(9)
 
   return (
-    <Box className='flex gap-4 py-2'>
-      <Box>
+    <Box className='flex flex-col sm:flex-row gap-4 py-2 '>
+      <Box display={'flex'} justifyContent={'center'}>
         <ImageWithFallback
           src='https://thanhnien.mediacdn.vn/Uploaded/2014/Pictures20133/CongDong/070313/Iron-man-3-d.jpg'
           alt='avatar'
@@ -18,22 +18,33 @@ const BoxInformation = () => {
       </Box>
       <Box className='flex flex-1 flex-col gap-2 justify-between'>
         <Box>
-          <Typography fontSize={'30px'}>Câu Chuyện Lúc Nửa Đêm</Typography>
-          <Typography fontSize={'15px'} className='text-[#696969]'>
+          <Typography fontSize={'30px'} className='text-white'>
+            Câu Chuyện Lúc Nửa Đêm
+          </Typography>
+          <Typography fontSize={'15px'} className='text-[#888888]'>
             Goosebumps 2023
           </Typography>
         </Box>
         <Typography fontSize={'13px'} className='text-[#888888]'>
           22/08/2022
         </Typography>
-        <Box padding={'5px 15px 5px 10px'} className='bg-[#408bea] w-[180px]'>
-          <Typography fontSize={'13px'} fontWeight={500} className='uppercase text-white '>
+        <Box className='flex '>
+          <Typography
+            padding={'5px 15px 5px 10px'}
+            fontSize={'13px'}
+            fontWeight={500}
+            className='uppercase text-white bg-[#408bea]'
+          >
             Full 12/12 Tập Vietsup
           </Typography>
         </Box>
-        <Divider />
-        <Box className='flex gap-2'>
-          <Box className='w-[60px] h-full bg-[#bebebe] grid place-items-center'>
+        <Divider
+          sx={{
+            background: '#fff'
+          }}
+        />
+        <Box className='flex items-center gap-2'>
+          <Box className='w-[60px] h-[60px] bg-[#bebebe] grid place-items-center'>
             <Typography className='text-white ' fontSize={'20px'} fontWeight={600}>
               10
             </Typography>
@@ -48,7 +59,7 @@ const BoxInformation = () => {
                   setRating(newValue || 0)
                 }}
               />
-              <Typography fontSize={'13px'} className='bg-[#bebebe] p-1 text-white rounded-sm px-3'>
+              <Typography fontSize={'13px'} className='bg-[#bebebe] p-1 text-white rounded-sm px-3  hidden sm:block'>
                 Đánh giá của bạn: {rating}
               </Typography>
             </Box>
@@ -63,14 +74,25 @@ const BoxInformation = () => {
             </Box>
           </Box>
         </Box>
-        <Divider />
-        <Box className='flex py-1 gap-1'>
+        <Divider
+          sx={{
+            background: '#fff'
+          }}
+        />
+        <Box className='flex py-1 gap-1 text-white'>
           {categoryList.map((item, index) => (
             <Box key={item + index} className='flex items-center gap-2 pl-2'>
-              <Typography fontSize={'13px'} fontWeight={600}>
+              <Typography fontSize={'13px'} fontWeight={500}>
                 {item}
               </Typography>
-              {index < categoryList.length - 1 && <Divider orientation='vertical' />}
+              {index < categoryList.length - 1 && (
+                <Divider
+                  orientation='vertical'
+                  sx={{
+                    background: '#fff'
+                  }}
+                />
+              )}
             </Box>
           ))}
         </Box>

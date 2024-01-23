@@ -1,5 +1,5 @@
 import { Box, Skeleton, Typography } from '@mui/material'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import PaginationCPN from 'src/components/pagination'
 import CardNews from './card_news'
 import { useAppDispatch, useAppSelector } from 'src/redux_store'
@@ -15,20 +15,19 @@ const News = () => {
 
   useEffect(() => {
     dispatch(getNews())
-  }, [dispatch])
+  }, [])
 
   return (
-    <Box className='flex flex-col gap-2 p-2'>
-      <Box className='flex justify-between items-center border-l-4 border-solid border-[#de3130] px-2 '>
-        <Typography className='text-2xl font-bold uppercase'>Tin tức</Typography>
+    <Box className='flex flex-col gap-4 py-4'>
+      <Box className='flex justify-between items-center border-l-4 border-solid border-[#de3130] px-4 '>
+        <Typography fontSize={'18px'} className='text-white font-bold uppercase'>
+          Tin tức
+        </Typography>
       </Box>
-      <Box className='flex flex-wrap gap-4'>
+      <Box className='grid grid-cols-2 gap-4'>
         {isLoadingNews
           ? new Array(4).fill('0').map((item, index) => (
-              <Box
-                className='backdrop-blur-lg rounded-lg border bg-[#eeeeee] border-white/10 p-2 flex flex-col items-center justify-center w-[49%] cursor-pointer'
-                key={item + index}
-              >
+              <Box className='w-full bg-[#eeeeee] flex flex-col items-center justify-center' key={item + index}>
                 <Box className='w-full h-full flex flex-col gap-2'>
                   <Box className='flex gap-2 items-center'>
                     <Skeleton variant='circular' width={40} height={40} />

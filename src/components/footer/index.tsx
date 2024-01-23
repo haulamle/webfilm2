@@ -25,17 +25,17 @@ const Footer = () => {
   const navigate = useNavigate()
 
   return (
-    <React.Fragment>
-      <Box className='w-full text-black justify-center flex flex-col items-center' border={'1px solid #eeeeee'}>
-        <Box width={'80%'} display={'flex'} padding={'40px 0px'} justifyContent={'space-between'}>
-          <Box flex={0.3}>
+    <Box className='w-full text-white justify-center flex flex-col items-center' borderTop={'1px solid #eeeeee'}>
+      <Box className=' max-w-[1024px] flex py-[40px] px-4 ' gap={4}>
+        <Box className='grid grid-cols-3 sm:grid-cols-5 gap-4'>
+          <Box className='col-span-2 hidden sm:block'>
             <Box borderLeft={'4px solid #de3130'}>
-              <ImageWithFallback src={logo} alt='logo' className='ml-[15px] object-cover  w-[50px]' />
+              <ImageWithFallback src={logo} alt='logo' className='ml-[15px] object-cover h-[40px]' />
             </Box>
             <Box sx={{ marginTop: '15px', marginLeft: '20px' }}>
               <Typography fontSize={'13px'}>
                 <Typography component={'span'} color={'#0084ff'}>
-                  Motphim
+                  Phimmoi4{' '}
                 </Typography>
                 - Trang xem phim trực tuyến miễn phí tại Vietnam. Tại đây các bạn có thể tìm kiếm những bộ phim mà mình
                 yêu thích với hơn hàng nghìn bộ phim mới được cập nhật thường xuyên.
@@ -68,11 +68,11 @@ const Footer = () => {
             </Box>
           ))}
         </Box>
-        <Box className='w-full bg-gray-200 py-3 h-50 grid place-items-center text-sm'>
-          Bản quyền © 2023 | Thực hiện bởi Haudev
-        </Box>
       </Box>
-    </React.Fragment>
+      <Box className='w-full bg-[#3a3a3a] py-3 h-50 grid place-items-center text-sm'>
+        Bản quyền © 2023 | Thực hiện bởi phimmoi4
+      </Box>
+    </Box>
   )
 }
 

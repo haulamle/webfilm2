@@ -12,9 +12,9 @@ interface IProp {
 const BoxContent = ({ loading, data }: IProp) => {
   return (
     <Box className='flex flex-col gap-4'>
-      <Box className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2'>
+      <Box className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2'>
         {loading
-          ? new Array(12).fill('0').map((item, index) => (
+          ? new Array(8).fill('0').map((item, index) => (
               <Box
                 key={item + index}
                 className='backdrop-blur-lg backdrop-saturate-180 rounded-lg border bg-[#eeeeee] border-white/10 p-2 drop-shadow-lg flex flex-col items-start w-[160px] cursor-pointer'
@@ -32,7 +32,7 @@ const BoxContent = ({ loading, data }: IProp) => {
       </Box>
       <PaginationCPN
         handleChangePage={() => {}}
-        page={5}
+        page={3}
         totalPage={5}
         sx={{ display: 'flex', justifyContent: 'center', py: 1, mt: 1 }}
       />
