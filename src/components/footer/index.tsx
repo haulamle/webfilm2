@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material'
 import logo from '../../assets/logo.jpg'
-import React from 'react'
 import { ImageWithFallback } from '../image_with_fallback'
 import { goToNextPage } from 'src/utils/common'
 import { PATH } from 'src/routes/path'

@@ -1,5 +1,5 @@
 import { Box, Skeleton, Typography } from '@mui/material'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import PaginationCPN from 'src/components/pagination'
 import CardNews from './card_news'
 import { useAppDispatch, useAppSelector } from 'src/redux_store'

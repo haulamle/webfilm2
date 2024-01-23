@@ -13,7 +13,7 @@ interface IProps {
 const TabLayout = (props: IProps) => {
   const { value, handleChange, tabList, sx = {} } = props
 
-  const onChange = (event: React.SyntheticEvent, newValue: string) => {
+  const onChange = (_: React.SyntheticEvent, newValue: string) => {
     handleChange(newValue)
   }
 

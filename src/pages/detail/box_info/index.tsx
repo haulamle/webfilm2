@@ -55,7 +55,7 @@ const BoxInformation = () => {
                 name='simple-controlled'
                 max={10}
                 value={rating}
-                onChange={(event, newValue) => {
+                onChange={(_, newValue) => {
                   setRating(newValue || 0)
                 }}
               />
